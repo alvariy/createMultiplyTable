@@ -1,5 +1,5 @@
 function validateNumber (firstNumber, secondNumber) {
-    
+
     if(firstNumber > secondNumber)
     {
         return null;
@@ -12,14 +12,15 @@ function validateNumber (firstNumber, secondNumber) {
 
 function checkIfInRange (number){
 
-    if(number <= 1000 && number > 1)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return (number <= 1000 && number > 1)
+    // if(number <= 1000 && number > 1)
+    // {
+    //     return true;
+    // }
+    // else
+    // {
+    //     return false;
+    // }
 
 }
 

@@ -2,7 +2,7 @@ const funcMap = require('../validateNumber');
 
 
 
-it ('should validate numbers', () => {
+it ('should return null given first number is greater that second', () => {
 
     const firstNumber = 5;
     const secondNumber = 3;
@@ -11,14 +11,30 @@ it ('should validate numbers', () => {
 });
 
 
-it ('should check if number is in range', () => {
+it ('should return true given first number is not greater that second', () => {
+
+    const firstNumber = 3;
+    const secondNumber = 5;
+    let number = funcMap.validateNumber(firstNumber,secondNumber);
+    expect(number).toBe(true);
+});
+
+it ('should return false if number is in range given inputNumber is greater than 1000', () => {
 
     const inputNumber = 1001;
     let result = funcMap.checkIfInRange(inputNumber);
     expect(result).toBe(false);
 });
 
-it ('should arrange list of equation', () => {
+it ('should return true if number is in range', () => {
+
+    const inputNumber = 1000;
+    let result = funcMap.checkIfInRange(inputNumber);
+    expect(result).toBe(true);
+});
+
+
+it ('should arrange list of equation given valid numbers', () => {
 
     const firstNumber = 2;
     const secondNumber = 4;
