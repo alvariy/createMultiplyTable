@@ -24,34 +24,42 @@ function checkIfInRange (number){
 }
 
 function MultiplyNumbers (firstNumber, secondNumber){
-    // let listOfEquation = new Set();
 
     let listOfEquation = '';
-    for(let i = 0; i < secondNumber; i++)
-    {
-        if(i === (secondNumber - 1)) //last
-        {
-            listOfEquation += (firstNumber + 'x' + (firstNumber + i) + '=' + (firstNumber*(firstNumber+i)) );
+    // let nextNum = firstNumber + 1;
+    let multiplyer = firstNumber + 1;
 
-        }
-        else if (i === 0) // first
+    for(let i = 0; i < secondNumber-1; i++)
+    {
+       if (i === 0) // first
         {
             listOfEquation += (firstNumber + 'x' + (firstNumber + i) + '=' + (firstNumber*(firstNumber+i)) + '\n');
+            // nextNum += 1;
         }
-        else if (i != 0) // second to middle
-        {   
-            listOfEquation += (firstNumber + 'x' + (firstNumber + i) + '=' + (firstNumber*(firstNumber+i)) + ' ');
-            
-            for(let j = i; j < secondNumber; j++)
+        else
+        {
+            for(let j = 0; j < multiplyer-1; j++)
             {
-            listOfEquation += (firstNumber + i + 'x' + (firstNumber + j) + '=' + ((firstNumber+i)*(firstNumber+j)) + '\n');
+                if(j == multiplyer-2)
+                {
+                listOfEquation += (firstNumber + j + 'x' + (multiplyer) + '=' + ((firstNumber + j)*(multiplyer)) + '\n');
+                }
+                // else if(j == multiplyer)
+                // {
+                //     listOfEquation += (firstNumber + j + 'x' + (multiplyer) + '=' + ((firstNumber + j)*(multiplyer)) + '');
+                // }
+                else{
+                    listOfEquation += (firstNumber + j + 'x' + (multiplyer) + '=' + ((firstNumber + j)*(multiplyer)) + ' ');
+                }
             }
+            multiplyer += 1;
+            // nextNum += 1;
         }
     }
-
-    var currentCount = firstNumber;
-    var multiplyer = firstNumber;
-    var currrrrrr = firstNumber;
+    listOfEquation = listOfEquation.trim();
+    // var currentCount = firstNumber;
+    // var multiplyer = firstNumber;
+    // var currrrrrr = firstNumber;
 
     // for(let i = 0; i< secondNumber-1; i++)
     // {

@@ -20,9 +20,9 @@ it ('should check if number is in range', () => {
 
 it ('should arrange list of equation', () => {
 
-    const firstNumber = 1;
-    const secondNumber = 2;
-    const resultsss = '1x1=1\n1x2=2'
+    const firstNumber = 2;
+    const secondNumber = 4;
+    const resultsss = '2x2=4\n2x3=6 3x3=9\n2x4=8 3x4=12 4x4=16'
     console.log(resultsss);
     let result = funcMap.MultiplyNumbers(firstNumber,secondNumber);
     // console.log('1x1=1 \n' + '1x2=2');
